@@ -4,12 +4,13 @@ let localS = document.getElementById("session");
 
 function setInitialData() {
 
-    if (!localStorage.getItem("localCounter")) {
-        localP.innerHTML = ": " + 0;
+    if (localStorage.getItem("localCounter")) {
+        localP.innerHTML = ": " + localStorage.getItem("localCounter");
         localS.innerHTML = ": " + 0;
+        
     }
     else {
-        localP.innerHTML = ": " + localStorage.getItem("localCounter");
+        localP.innerHTML = ": " + 0;
         localS.innerHTML = ": " + 0;
     }
 }
